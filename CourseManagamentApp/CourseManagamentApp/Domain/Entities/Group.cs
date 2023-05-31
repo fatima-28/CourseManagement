@@ -16,13 +16,13 @@ namespace CourseManagamentApp.Domain.Entities
         public string GroupNum { get; set; }
         public Category Category { get; set; }
         public int Capacity { get; set; }
-        public List<Student> students { get; set; }
+        public List<Student> students;
         static int _id=1;
 
         public Group(Category category,int capacity)
         {
-           
-            Id = _id++;
+            students=new List<Student>();
+             Id = _id++;
             if (category==Category.Programming)
             {
                 GroupNum = $"PR{StaticGroupNums.PR++}";
@@ -68,7 +68,7 @@ namespace CourseManagamentApp.Domain.Entities
             }
             else
             {
-                Console.WriteLine("Student capacity is full");
+               ConsoleColor.Red.WriteConsole("Student capacity is full");
                 return;
             }
             if (student.GroupNo == default)

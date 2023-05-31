@@ -27,7 +27,8 @@ namespace CourseManagamentApp.Services.Implementations
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var stu = _repo.Get(m => m.Id == id);
+            _repo.Delete(stu);
         }
 
         public List<Student> GetAll()
