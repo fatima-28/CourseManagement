@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using CourseManagamentApp.Domain.Common;
 using CourseManagamentApp.Helper;
 
@@ -20,31 +21,32 @@ namespace CourseManagamentApp.Domain.Entities
 
         public Group(Category category,int capacity)
         {
+           
             Id = _id++;
             if (category==Category.Programming)
             {
                 GroupNum = $"PR{StaticGroupNums.PR++}";
                
             }
-            else if (category == Category.Network)
+            else if (category == Category.Marketing)
             {
-                GroupNum = $"PR{StaticGroupNums.NW++}";
-            }
-            else if (category == Category.System)
-            {
-                GroupNum = $"PR{StaticGroupNums.SY++}";
-            }
-            else if (category == Category.CyberSecurity)
-            {
-                GroupNum = $"PR{StaticGroupNums.CB++}";
+                GroupNum = $"MA{StaticGroupNums.MA++}";
             }
             else if (category == Category.Design)
             {
-                GroupNum = $"PR{StaticGroupNums.DG++}";
+                GroupNum = $"DG{StaticGroupNums.DG++}";
             }
-            else if (category == Category.Marketing)
+            else if (category == Category.Network)
             {
-                GroupNum = $"PR{StaticGroupNums.MA++}";
+                GroupNum = $"NW{StaticGroupNums.NW++}";
+            }
+            else if (category == Category.System)
+            {
+                GroupNum = $"SY{StaticGroupNums.SY++}";
+            }
+            else if (category == Category.CyberSecurity)
+            {
+                GroupNum = $"CB{StaticGroupNums.CB++}";
             }
             else
             {
@@ -57,27 +59,28 @@ namespace CourseManagamentApp.Domain.Entities
 
 
         }
-    //    public void AddStu(Student student)
-    //    {
+        public void AddStudent(Student student)
+        {
 
-    //        if (students.Count < Capacity)
-    //        {
-    //            students.Add(student);
-    //        }
-    //        else
-    //        {
-    //            Console.WriteLine("Student capacity is full!");
-    //            return;
-    //        }
-    //        if (student.GroupNo == default)
-    //        {
-    //            student.GroupNo = GroupNum;
-    //        }
-    //        else
-    //        {
-    //            throw new Exception("This student belong to other group!");
-    //        }
+            if (students.Count < Capacity)
+            {
+                students.Add(student);
+            }
+            else
+            {
+                Console.WriteLine("Student capacity is full");
+                return;
+            }
+            if (student.GroupNo == default)
+            {
+                student.GroupNo = GroupNum;
+            }
+            else
+            {
+                throw new Exception("This student belong to other group");
+            }
 
-    //    }
+        }
+
     }
 }

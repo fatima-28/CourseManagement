@@ -32,7 +32,7 @@ namespace CourseManagamentApp.Services.Implementations
 
         public List<Student> GetAll()
         {
-            throw new NotImplementedException();
+            return _repo.GetAll(m => m.Id >= 0);
         }
 
         public Student GetById(int id)

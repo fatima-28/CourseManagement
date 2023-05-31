@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourseManagamentApp.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,5 +15,6 @@ namespace CourseManagamentApp.Helper
         internal static int PR = 100;
         internal static int MA = 100;
         internal static int DG = 100;
-    }
+
+           }
 }

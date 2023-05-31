@@ -8,7 +8,7 @@ namespace CourseManagamentApp.Domain.Entities
 {
    public enum Category
     {
-        Programming,
+        Programming=1,
         Marketing,
         Design,
         Network,

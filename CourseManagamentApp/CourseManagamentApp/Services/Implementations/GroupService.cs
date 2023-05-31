@@ -26,12 +26,13 @@ namespace CourseManagamentApp.Services.Implementations
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var group = _repo.Get(m => m.Id == id);
+            _repo.Delete(group);
         }
 
         public List<Group> GetAll()
         {
-            throw new NotImplementedException();
+            return _repo.GetAll(m=>m.Id>=0);
         }
 
         public Group GetById(int id)
