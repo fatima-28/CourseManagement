@@ -1,0 +1,15 @@
+C:\Users\FAT\Desktop\CourseManagament\CourseManagamentApp\CourseManagamentApp\bin\Debug\net6.0\CourseManagamentApp.exe
+C:\Users\FAT\Desktop\CourseManagament\CourseManagamentApp\CourseManagamentApp\bin\Debug\net6.0\CourseManagamentApp.deps.json
+C:\Users\FAT\Desktop\CourseManagament\CourseManagamentApp\CourseManagamentApp\bin\Debug\net6.0\CourseManagamentApp.runtimeconfig.json
+C:\Users\FAT\Desktop\CourseManagament\CourseManagamentApp\CourseManagamentApp\bin\Debug\net6.0\CourseManagamentApp.dll
+C:\Users\FAT\Desktop\CourseManagament\CourseManagamentApp\CourseManagamentApp\bin\Debug\net6.0\CourseManagamentApp.pdb
+C:\Users\FAT\Desktop\CourseManagament\CourseManagamentApp\CourseManagamentApp\obj\Debug\net6.0\CourseManagamentApp.csproj.AssemblyReference.cache
+C:\Users\FAT\Desktop\CourseManagament\CourseManagamentApp\CourseManagamentApp\obj\Debug\net6.0\CourseManagamentApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FAT\Desktop\CourseManagament\CourseManagamentApp\CourseManagamentApp\obj\Debug\net6.0\CourseManagamentApp.AssemblyInfoInputs.cache
+C:\Users\FAT\Desktop\CourseManagament\CourseManagamentApp\CourseManagamentApp\obj\Debug\net6.0\CourseManagamentApp.AssemblyInfo.cs
+C:\Users\FAT\Desktop\CourseManagament\CourseManagamentApp\CourseManagamentApp\obj\Debug\net6.0\CourseManagamentApp.csproj.CoreCompileInputs.cache
+C:\Users\FAT\Desktop\CourseManagament\CourseManagamentApp\CourseManagamentApp\obj\Debug\net6.0\CourseManagamentApp.dll
+C:\Users\FAT\Desktop\CourseManagament\CourseManagamentApp\CourseManagamentApp\obj\Debug\net6.0\refint\CourseManagamentApp.dll
+C:\Users\FAT\Desktop\CourseManagament\CourseManagamentApp\CourseManagamentApp\obj\Debug\net6.0\CourseManagamentApp.pdb
+C:\Users\FAT\Desktop\CourseManagament\CourseManagamentApp\CourseManagamentApp\obj\Debug\net6.0\CourseManagamentApp.genruntimeconfig.cache
+C:\Users\FAT\Desktop\CourseManagament\CourseManagamentApp\CourseManagamentApp\obj\Debug\net6.0\ref\CourseManagamentApp.dll
