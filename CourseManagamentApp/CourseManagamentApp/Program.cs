@@ -10,15 +10,15 @@ try
     while (checker)
     {
 
-        ConsoleColor.White.WriteConsole("***1.Create Student");
-        ConsoleColor.White.WriteConsole("***2.Show all Students");
-        ConsoleColor.White.WriteConsole("***3.Create Group");
-        ConsoleColor.White.WriteConsole("***4.Show all Groups");
+        ConsoleColor.White.WriteConsole("1.Create Student");
+        ConsoleColor.White.WriteConsole("2.Show all Students");
+        ConsoleColor.White.WriteConsole("3.Create Group");
+        ConsoleColor.White.WriteConsole("4.Show all Groups");
         ConsoleColor.White.WriteConsole("5.Get Student by Group Id");
-        ConsoleColor.White.WriteConsole("***6.Delete Group");
-        ConsoleColor.White.WriteConsole("***7.Delete Student");
-        ConsoleColor.White.WriteConsole("***8.Get Group By Id");
-        ConsoleColor.White.WriteConsole("***0.Stop ");
+        ConsoleColor.White.WriteConsole("6.Delete Group");
+        ConsoleColor.White.WriteConsole("7.Delete Student");
+        ConsoleColor.White.WriteConsole("8.Get Group By Id");
+        ConsoleColor.White.WriteConsole("0.Stop ");
 
         ConsoleColor.Yellow.WriteConsole("Choose option:");
     Option: string option = Console.ReadLine();

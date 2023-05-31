@@ -30,7 +30,7 @@ namespace CourseManagamentApp.Controllers
                 ConsoleColor.Red.WriteConsole("Student's fullname can not be null!");
                 return;
             }
-            //List<Student> stuList = _stuService.GetAll();
+           
 
             ConsoleColor.Yellow.WriteConsole("Add Students Age:");
              int age = int.Parse(Console.ReadLine());
@@ -41,7 +41,9 @@ namespace CourseManagamentApp.Controllers
             Student stu = new Student(fullName,age);
 
             AddStuToGroup(stu);
-            _stuService.Create(stu);
+            if (_groupService.GetAll().Count > 0) _stuService.Create(stu);
+            
+            
            
         }
         public void GetAllStu()
@@ -78,7 +80,41 @@ namespace CourseManagamentApp.Controllers
         } 
         public void GetByGroupId()
         {
+            try
+            {
+                ConsoleColor.DarkGray.WriteConsole("Current groups in database:");
 
+                for (int i = 0; i < _groupService.GetAll().Count; i++)
+                {
+                    ConsoleColor.Yellow.WriteConsole($"\n{_groupService.GetAll()[i].Id}.{_groupService.GetAll()[i].GroupNum}\n");
+                }
+                ConsoleColor.Yellow.WriteConsole("Select one of them:");
+               Id: int groupId = int.Parse(Console.ReadLine());
+                var group = _groupService.GetById(groupId);
+               
+                if (group is null)
+                {
+                    ConsoleColor.Red.WriteConsole("Group can't be found: ");
+                    goto Id;
+                }
+                else
+                {
+                    for (int i = 0; i < group.students.Count; i++)
+                    {
+                        ConsoleColor.Green.WriteConsole($"Id: {group.students[i].Id} FullName: {group.students[i].FullName} Age: {group.students[i].Age}");
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                ConsoleColor.Red.WriteConsole(ex.Message);
+                return;
+               
+
+
+            }
         }
         public  void AddStuToGroup(Student student) {
             
@@ -88,7 +124,7 @@ namespace CourseManagamentApp.Controllers
                 ConsoleColor.Yellow.WriteConsole("Groups in Database:");
                 for (int i = 0; i < _groupService.GetAll().Count; i++)
                 {
-                    Console.WriteLine($"\n{i + 1}.{_groupService.GetAll()[i].GroupNum}\n");
+                    ConsoleColor.Yellow.WriteConsole($"\n{i + 1}.{_groupService.GetAll()[i].GroupNum}\n");
                 }
 
                 ConsoleColor.Yellow.WriteConsole("Write group name where you want to add:");
@@ -118,6 +154,7 @@ namespace CourseManagamentApp.Controllers
 
                 ConsoleColor.Red.WriteConsole("There is no any group in database!");
                 return;
+                
             }
         }
 
