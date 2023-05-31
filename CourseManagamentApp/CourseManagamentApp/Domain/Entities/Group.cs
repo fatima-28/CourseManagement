@@ -3,21 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CourseManagamentApp.Domain.Common;
 using CourseManagamentApp.Helper;
+
 
 namespace CourseManagamentApp.Domain.Entities
 {
-    public class Group
+    public class Group:BaseEntity
     {
-        public string GroupNum;
-        public bool Status;
-        public Category Category;
-        public int Capacity;
-        public List<Student> students;
-        public static List<Group> groups = new List<Group>() { };
+         
+        public string GroupNum { get; set; }
+        public Category Category { get; set; }
+        public int Capacity { get; set; }
+        public List<Student> students { get; set; }
+        static int _id=1;
 
-        public Group(Category category, bool status)
+        public Group(Category category,int capacity)
         {
+            Id = _id++;
             if (category==Category.Programming)
             {
                 GroupNum = $"PR{StaticGroupNums.PR++}";
@@ -49,23 +52,32 @@ namespace CourseManagamentApp.Domain.Entities
              
             }
             Category = category;
-            if (status == true )
-            {
-                Status = status;
-                Capacity = 15;
-                students = new List<Student>(Capacity);
-            }
-            else if(status == false)
-            {
-                Status = status;
-                Capacity = 10;
-                students = new List<Student>(Capacity);
-            }
-            else
-            {
-                Console.WriteLine("Status only can be true or false!");
-                return;
-            }
+            Capacity = capacity;
+           
+
+
         }
+    //    public void AddStu(Student student)
+    //    {
+
+    //        if (students.Count < Capacity)
+    //        {
+    //            students.Add(student);
+    //        }
+    //        else
+    //        {
+    //            Console.WriteLine("Student capacity is full!");
+    //            return;
+    //        }
+    //        if (student.GroupNo == default)
+    //        {
+    //            student.GroupNo = GroupNum;
+    //        }
+    //        else
+    //        {
+    //            throw new Exception("This student belong to other group!");
+    //        }
+
+    //    }
     }
 }
